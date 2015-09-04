@@ -128,7 +128,6 @@ namespace CardGames.GameLogic
 
 		/// <summary>
 		/// The player hit the top of the cards "snap"! :)
-		/// Check if the top two cards' ranks match.
 		/// </summary>
 		public void PlayerHit (int player)
 		{
@@ -139,6 +138,10 @@ namespace CardGames.GameLogic
 			{
 				_score[player]++;
 				//TODO: consider playing a sound here...
+			}
+			else if ( player >= 0 && player < _score.Length)
+			{
+				_score[player]--;
 			}
 
 			// stop the game...
